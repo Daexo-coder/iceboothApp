@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Image } from 'react-native';
 import { SimpleLineIcons } from '@expo/vector-icons';
 import { FontAwesome6 } from '@expo/vector-icons';
 import { Fontisto } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
         <Image source={require('./myFace.jpg')} style={styles.profilePicture}/>
         <View><Text style={styles.profileName}>Monehela Lichaba</Text>
         <Text style={styles.activeStatus}>10hrs ago</Text></View>
-        <Image style={styles.threeDots}/>
+        <AntDesign name="ellipsis1" size={24} color="black" style={styles.ellipses}/>
       </View>
       <Text>This is a facebook user profile for <Text>Monehela Lichaba</Text>. 
       It contains the image of his favourite dish. Mmmmmmmm!</Text>
@@ -108,5 +109,8 @@ const styles = StyleSheet.create({
   biggerPicture:{
     width:'100%',
     height:'100%',
+  },
+  ellipses:{
+    marginLeft:'5.4em',
   }
 });
